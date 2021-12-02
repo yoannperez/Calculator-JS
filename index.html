@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/sass/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/main.css" />
     <title>CalculatorJS</title>
-</head>
-<body>
+  </head>
+  <body>
     <section id="Calculator">
-        <div class="calculatorContainer">
+      <div class="calculatorContainer">
+        <h2>Calculator JS</h2>
 
-            <h2>Calculator JS</h2>
-
-            <div id="display" class="calculatorDisplay"><p id="displayTxt">0</p></div>
-
+        <div id="display" class="calculatorDisplay"><p id="displayTxt">0</p></div>
+        <div class="rowContainer">
+          <div class="column">
             <div class="numberBtn">
-                <div id="7" class="roundBtn">7</div>
-                <div id="8" class="roundBtn">8</div>
-                <div id="9" class="roundBtn">9</div>
-            </div>
-            
-            <div class="numberBtn">
-                <div id="4" class="roundBtn">4</div>
-                <div id="5" class="roundBtn">5</div>
-                <div id="6" class="roundBtn">6</div>
-            </div>
-            
-            <div class="numberBtn">
-                <div id="1" class="roundBtn">1</div>
-                <div id="2" class="roundBtn">2</div>
-                <div id="3" class="roundBtn">3</div>
-            </div>
-            
-            <div class="numberBtn">
-                <div id="0" class="roundBtn">0</div>
-                <div id="dot" class="roundBtn">.</div>
-                <div id="cancel" class="roundBtn">C</div>
+              <div id="mMore" class="roundBtn mem">M+</div>
+              <div id="mMinus" class="roundBtn mem">M-</div>
+              <div id="mClear" class="roundBtn mem">Mc</div>
+              <div id="mRecall" class="roundBtn mem">Mr</div>
             </div>
 
+            <div class="numberBtn">
+              <div id="7" class="roundBtn pad">7</div>
+              <div id="8" class="roundBtn pad">8</div>
+              <div id="9" class="roundBtn pad">9</div>
+            </div>
 
+            <div class="numberBtn">
+              <div id="4" class="roundBtn pad">4</div>
+              <div id="5" class="roundBtn pad">5</div>
+              <div id="6" class="roundBtn pad">6</div>
+            </div>
 
+            <div class="numberBtn">
+              <div id="1" class="roundBtn pad">1</div>
+              <div id="2" class="roundBtn pad">2</div>
+              <div id="3" class="roundBtn pad">3</div>
+            </div>
 
-
-
+            <div class="numberBtn">
+              <div id="0" class="roundBtn pad">0</div>
+              <div id="dot" class="roundBtn pad">.</div>
+              <div id="cancel" class="roundBtn pad">C</div>
+            </div>
+          </div>
+          <div class="operandBtn">
+            <div id="div" class="roundBtn operand">/</div>
+            <div id="multi" class="roundBtn operand">X</div>
+            <div id="minus" class="roundBtn operand">-</div>
+            <div id="more" class="roundBtn operand">+</div>
+            <div id="eval" class="roundBtn operand">=</div>
         </div>
-
+        </div>
+      </div>
     </section>
     <script src="./calculator.js"></script>
-</body>
+  </body>
 </html>

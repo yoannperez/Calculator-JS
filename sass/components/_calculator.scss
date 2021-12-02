@@ -35,20 +35,36 @@
         text-align: right;   
     }   
 }
+.rowContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+
 
 .numberBtn{
     display:flex;
     justify-content: space-around;
     padding: 5px;
-    width: 80%;
+    // background-color: green;
+}
 
-    .roundBtn{
-        border-radius: 50px;
-        border: 2px solid black;
-        padding:5px 10px;
+.operandBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // background-color: hotpink;
 
-        &:active{
-            background-color: red;
-        }
+}
+.roundBtn{
+    border-radius: 50px;
+    border: 2px solid black;
+    padding:5px 10px;
+
+    &:active{
+        background-color: red;
     }
 }

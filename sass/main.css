@@ -41,6 +41,20 @@
   text-align: right;
 }
 
+.rowContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: gainsboro;
+  padding: 10px;
+}
+
 .numberBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,16 +62,27 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 5px;
-  width: 80%;
 }
 
-.numberBtn .roundBtn {
+.operandBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.roundBtn {
   border-radius: 50px;
   border: 2px solid black;
   padding: 5px 10px;
 }
 
-.numberBtn .roundBtn:active {
+.roundBtn:active {
   background-color: red;
 }
 /*# sourceMappingURL=main.css.map */
