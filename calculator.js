@@ -19,8 +19,10 @@ const init = () => {
 
 init();
 
-function storeFirstValue() {
+function storeFirstValue(operator) {
   firstValue = currentValue.join("");
+  operateur = operator;
+  currentValue = [];
 }
 
 keys.forEach((e) => {
@@ -52,24 +54,16 @@ operand.forEach((op) => {
   op.addEventListener("click", function () {
     switch (op.id) {
       case "div":
-        storeFirstValue();
-        operateur = "/";
-        currentValue = [];
+        storeFirstValue("/");
         break;
       case "multi":
-        storeFirstValue();
-        operateur = "*";
-        currentValue = [];
+        storeFirstValue("*");
         break;
       case "minus":
-        storeFirstValue();
-        operateur = "-";
-        currentValue = [];
+        storeFirstValue("-");
         break;
       case "more":
-        storeFirstValue();
-        operateur = "+";
-        currentValue = [];
+        storeFirstValue("+");
         break;
       case "eval":
         if (firstValue != 0) {
