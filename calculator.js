@@ -27,25 +27,23 @@ function storeFirstValue(operator) {
 
 keys.forEach((e) => {
   e.addEventListener("click", function () {
-    if (e.id == "cancel") {
-      // Cancel Case
-      currentValue = [];
-      dotValidate = true;
-      display.innerText = 0;
-    } else {
-      // Dot case
-      if (e.id == "dot" && dotValidate) {
-        dotValidate = false;
-        currentValue.push(".");
-        display.innerText = currentValue.join("");
-      }
-      if (e.id == "dot" && !dotValidate) {
-        console.log("Dot non valide");
-      } else {
-        // Number case
+    switch (e.id) {
+      case "cancel":
+        currentValue = [];
+        dotValidate = true;
+        display.innerText = 0;
+        break;
+      case "dot":
+        if (dotValidate) {
+          dotValidate = false;
+          currentValue.push(".");
+          display.innerText = currentValue.join("");
+        }
+        break;
+      default:
         currentValue.push(parseInt(e.id));
         display.innerText = currentValue.join("");
-      }
+        break;
     }
   });
 });
@@ -73,7 +71,7 @@ operand.forEach((op) => {
         init();
         break;
       default:
-        console.log("error");
+        console.log("err");
     }
   });
 });
