@@ -1,15 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+h2 {
+  font-family: "Electrolize", sans-serif;
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
 .calculatorContainer {
-  height: 400px;
-  width: 300px;
-  border: 2px solid black;
-  border-radius: 30px;
-  padding: 0.1em 1em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 200px;
+  margin: 1em;
+  border: 3px groove darkblue;
+  -webkit-box-shadow: 3px 3px 3px darkslateblue, inset 2px 2px 2px 0px darkslateblue;
+          box-shadow: 3px 3px 3px darkslateblue, inset 2px 2px 2px 0px darkslateblue;
+  border-radius: 10px;
+  padding: 0.2em 0.3em;
+  background-color: darkorange;
 }
 
 .calculatorContainer h2 {
@@ -18,9 +32,11 @@
 
 #display {
   width: 100%;
-  background-color: gray;
+  background-color: lightblue;
+  border: 3px groove darkblue;
+  margin-top: 2px;
   border-radius: 5px;
-  color: white;
+  color: darkblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,12 +44,13 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  padding: 0px;
+  padding: 5px 3px 0 3px;
+  margin-bottom: 5px;
 }
 
 #display p {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 3em;
+  font-family: "Electrolize", "Courier New", Courier, monospace;
+  font-size: 1.6em;
   line-height: 1em;
   vertical-align: bottom;
   margin: 0;
@@ -42,6 +59,8 @@
 }
 
 .rowContainer {
+  border: 3px groove darkblue;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +71,8 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: gainsboro;
-  padding: 10px;
+  padding: 5px;
+  padding-right: 15px;
 }
 
 .numberBtn {
@@ -62,6 +82,26 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 5px;
+}
+
+.roundBtn {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: linen;
+}
+
+.roundBtn:hover {
+  background-color: grey;
+  color: white;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.roundBtn:active {
+  color: white;
+  background-color: darkblue;
 }
 
 .operandBtn {
@@ -76,13 +116,13 @@
       justify-content: space-around;
 }
 
-.roundBtn {
-  border-radius: 50px;
-  border: 2px solid black;
-  padding: 5px 10px;
+.mem {
+  margin-right: 3px;
+  border-color: darkorange;
 }
 
-.roundBtn:active {
-  background-color: red;
+.eval {
+  height: 60px;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=main.css.map */

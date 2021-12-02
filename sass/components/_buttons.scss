@@ -1,0 +1,31 @@
+.roundBtn {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: linen;
+
+  &:hover {
+    background-color: grey;
+    color: white;
+    transition: ease-in-out 300ms;
+  }
+  &:active {
+    color: white;
+    background-color: darkblue;
+  }
+}
+.operandBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.mem {
+  margin-right: 3px;
+  border-color: darkorange;
+}
+
+.eval {
+  height: 60px;
+  border-radius: 20px;
+}

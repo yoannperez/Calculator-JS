@@ -1,70 +1,58 @@
 * {
-    box-sizing:border-box;
-    padding: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+.calculatorContainer {
+  height: fit-content;
+  width: 200px;
+  margin: 1em;
+  border: 3px groove darkblue;
+  box-shadow: 3px 3px 3px darkslateblue, inset 2px 2px 2px 0px darkslateblue;
 
-.calculatorContainer{
-    height: 400px;
-    width: 300px;
-    border: 2px solid black;
-    border-radius: 30px;
-    padding: 0.1em 1em;
+  border-radius: 10px;
+  padding: 0.2em 0.3em;
+  background-color: darkorange;
 
-    h2 {
-        text-align: right;
-    }
+  h2 {
+    text-align: right;
+  }
 }
 
 #display {
-    width: 100%;
-    background-color: gray;
-    border-radius: 5px;
-    color: white;
-    display: flex;
-    flex-direction: row-reverse;
-    
-    padding: 0px;
-    p {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 3em;
-        line-height: 1em;
-        vertical-align: bottom;
-        margin:0;
-        padding: 0;
-        text-align: right;   
-    }   
+  width: 100%;
+  background-color: lightblue;
+  border: 3px groove darkblue;
+  margin-top: 2px;
+  border-radius: 5px;
+  color: darkblue;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5px 3px 0 3px;
+  margin-bottom: 5px;
+  p {
+    font-family: "Electrolize", "Courier New", Courier, monospace;
+    font-size: 1.6em;
+    line-height: 1em;
+    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
 }
-.rowContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: gainsboro;
-    padding: 10px;
+.rowContainer {
+  border: 3px groove darkblue;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: gainsboro;
+  padding: 5px;
+  padding-right: 15px;
 }
-
-
-
-.numberBtn{
-    display:flex;
-    justify-content: space-around;
+.numberBtn {
+    display: flex;
+    justify-content:space-around;
     padding: 5px;
-    // background-color: green;
-}
-
-.operandBtn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    // background-color: hotpink;
-
-}
-.roundBtn{
-    border-radius: 50px;
-    border: 2px solid black;
-    padding:5px 10px;
-
-    &:active{
-        background-color: red;
-    }
-}
+  }
