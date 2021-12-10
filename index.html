@@ -8,8 +8,8 @@
     <title>CalculatorJS</title>
   </head>
   <body>
-    <section id="Calculator">
-      <div class="calculatorContainer">
+    <section >
+      <div class="calculatorContainer" id="Calculator" onmousedown="on_mouse_down_square(event)">
         <h2>Calculator JS</h2>
 
         <div id="display" class="calculatorDisplay"><p id="displayTxt">0</p></div>
@@ -57,5 +57,6 @@
       </div>
     </section>
     <script src="./calculator.js"></script>
+    <script src="./drag.js"></script>
   </body>
 </html>

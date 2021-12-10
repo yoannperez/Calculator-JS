@@ -13,6 +13,7 @@ h2 {
 }
 
 .calculatorContainer {
+  position: absolute;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
