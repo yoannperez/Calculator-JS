@@ -3,12 +3,14 @@
 const keys = document.querySelectorAll(".pad");
 const operand = document.querySelectorAll(".operand");
 const evaluate = document.querySelector(".evaluate");
+const memKey = document.querySelectorAll(".mem");
 const display = document.getElementById("displayTxt");
 
 let currentValue;
 var firstValue;
 var dotValidate;
 var operateur;
+var memory = 0;
 
 const init = () => {
   currentValue = [];
@@ -66,12 +68,41 @@ operand.forEach((op) => {
       case "eval":
         if (firstValue != 0) {
           let result = eval(`${firstValue} ${operateur} ${currentValue.join("")}`);
-          result.toString().length > 9 ? (display.innerText = result.toFixed(7)) : (display.innerText = result);
+          result.toString().length > 9 ? (display.innerText = result.toFixed(9)) : (display.innerText = result);
         }
         init();
         break;
       default:
         console.log("err");
+    }
+  });
+});
+
+memKey.forEach((key) => {
+  key.addEventListener("click", function () {
+    let actual = 0;
+
+    switch (key.id) {
+      case "mMore":
+        actual = parseFloat(currentValue.join(""));
+        memory += actual;
+        break;
+
+      case "mMinus":
+        actual = parseFloat(currentValue.join(""));
+        memory -= actual;
+        break;
+
+      case "mClear":
+        memory = 0;
+        break;
+
+      case "mRecall":
+        display.innerText = memory;
+        break;
+
+      default:
+        break;
     }
   });
 });
