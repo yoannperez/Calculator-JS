@@ -18,7 +18,7 @@ document.onmouseup = on_mouse_up;
 
 function on_mouse_move(event) {
   if (mouse_down === true) {
-    document.querySelector("#Calculator").style.left = event.clientX - 50 + "px";
-    document.querySelector("#Calculator").style.top = event.clientY - 50 + "px";
+    document.querySelector("#Calculator").style.left = event.clientX - 30 + "px";
+    document.querySelector("#Calculator").style.top = event.clientY - 30 + "px";
   }
 }

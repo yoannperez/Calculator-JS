@@ -13,7 +13,7 @@ var operateur;
 var memory = 0;
 
 const init = () => {
-  currentValue = [];
+  // currentValue = [];
   firstValue = 0;
   dotValidate = true;
   operateur = "";
@@ -50,6 +50,7 @@ keys.forEach((e) => {
   });
 });
 
+//Operation management
 operand.forEach((op) => {
   op.addEventListener("click", function () {
     switch (op.id) {
@@ -78,6 +79,7 @@ operand.forEach((op) => {
   });
 });
 
+//Memory Management
 memKey.forEach((key) => {
   key.addEventListener("click", function () {
     let actual = 0;
