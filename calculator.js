@@ -24,6 +24,8 @@ const printResult = () => {
   result.toString().length > 9 ? (display.innerText = result.toExponential()) : (display.innerText = result);
 };
 
+const myFunc = (num) => Number(num);
+
 const calculator = (a, b, operator) => {
   switch (operator) {
     case "+":
@@ -121,7 +123,6 @@ operand.forEach((op) => {
           break;
         case "eval":
           result = calculator(result, parseFloat(currentValue.join("")), prevOperation);
-          let myFunc = (num) => Number(num);
           currentValue = Array.from(String(result), myFunc);
           prevOperation = "";
           printResult();
@@ -138,7 +139,7 @@ operand.forEach((op) => {
 //Memory Management
 memKey.forEach((key) => {
   key.addEventListener("click", function () {
-    let actual = 0;
+    let actual = 0.;
 
     switch (key.id) {
       case "mMore":
@@ -157,6 +158,10 @@ memKey.forEach((key) => {
 
       case "mRecall":
         display.innerText = memory;
+        // currentValue = memory;
+        currentValue = Array.from(String(memory), myFunc);
+        
+        console.log(currentValue);
         break;
 
       default:
