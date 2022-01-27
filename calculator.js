@@ -12,6 +12,7 @@ var memory = 0;
 let cancelAlreadyPress = false;
 let result = 0;
 let prevOperation = "";
+let preventDoubleClick; //
 
 const init = () => {
   dotValidate = true;
@@ -20,7 +21,7 @@ const init = () => {
 init();
 
 const printResult = () => {
-  result.toString().length > 9 ? (display.innerText = result.toFixed(9)) : (display.innerText = result);
+  result.toString().length > 9 ? (display.innerText = result.toExponential()) : (display.innerText = result);
 };
 
 const calculator = (a, b, operator) => {
@@ -87,8 +88,11 @@ keys.forEach((e) => {
         }
         break;
       default:
+      
+        if (currentValue.length < 10) {
         currentValue.push(parseInt(e.id));
-        display.innerText = currentValue.join("");
+        display.innerText = currentValue.join("")
+      }
         break;
     }
   });
@@ -97,31 +101,36 @@ keys.forEach((e) => {
 //Operation management
 operand.forEach((op) => {
   op.addEventListener("click", function () {
-    switch (op.id) {
-      case "div":
-        launchCalculate("/");
-        break;
-      case "multi":
-        launchCalculate("*");
-        break;
-      case "minus":
-        launchCalculate("-");
-        break;
-      case "more":
-        launchCalculate("+");
-        break;
-      case "eval":
-        result = calculator(result, parseFloat(currentValue.join("")), prevOperation);
-        let myFunc = (num) => Number(num);
-        currentValue = Array.from(String(result), myFunc);
-        prevOperation = "";
-
-        display.innerText = result;
-
-        init();
-        break;
-      default:
-        console.log("err");
+    if (preventDoubleClick != op.id) {
+      switch (op.id) {
+        case "div":
+          launchCalculate("/");
+          preventDoubleClick = "div";
+          break;
+        case "multi":
+          launchCalculate("*");
+          preventDoubleClick = "multi";
+          break;
+        case "minus":
+          launchCalculate("-");
+          preventDoubleClick = "minus";
+          break;
+        case "more":
+          launchCalculate("+");
+          preventDoubleClick = "more";
+          break;
+        case "eval":
+          result = calculator(result, parseFloat(currentValue.join("")), prevOperation);
+          let myFunc = (num) => Number(num);
+          currentValue = Array.from(String(result), myFunc);
+          prevOperation = "";
+          printResult();
+          init();
+          preventDoubleClick = "eval";
+          break;
+        default:
+          console.log("err");
+      }
     }
   });
 });

@@ -37,11 +37,13 @@ h2 {
 
 #display {
   width: 100%;
-  background-color: lightblue;
+  background: -webkit-gradient(linear, left bottom, left top, from(#225b81), to(#add8e6));
+  background: linear-gradient(0deg, #225b81 0%, #add8e6 100%);
   border: 3px groove darkblue;
   margin-top: 2px;
   border-radius: 5px;
-  color: darkblue;
+  color: white;
+  text-shadow: 1px 1px 2px #225b81;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
