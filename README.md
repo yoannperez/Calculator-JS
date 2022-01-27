@@ -6,3 +6,4 @@ TODO :
 ------
 
     - Keyboard input.
+    - Fix display when a result return scientific number.
